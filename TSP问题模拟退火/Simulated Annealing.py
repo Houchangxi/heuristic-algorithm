@@ -8,13 +8,9 @@ Created on Mon Apr 20 18:41:02 2020
 import pandas as pd
 import math
 import random
-import numpy as np 
 import matplotlib.pyplot as plt
-from mpl_toolkits.mplot3d import Axes3D
 import sys
-from numpy.matlib import rand
 # from matplotlib.mlab import dist
-from matplotlib.artist import getp
 import copy
 import time
 
@@ -31,7 +27,7 @@ import time
 T0 = 30
 Tend = 1e-8
 #循环控制常数
-L = 30
+L = 50
 #温度衰减系数
 a = 0.98
 
@@ -126,25 +122,18 @@ def draw(best,city_x,city_y,n_len):
     plt.close(0)      
     
 def solve(file_name):
-    start = time.time()
     city_x,city_y = load_position(file_name)
-    end = time.time()
-    print ('read time')
-    print (start - end)
     n_len = len(city_x)
     city_x = [x*1000 for x in city_x]
     city_y = [x*1000 for x in city_y]
     distence = init_dis_matrix(n_len)
-    
-    print(city_x)
-    print(city_y)
     #得到距离矩阵
     getdistance(city_x,city_y,n_len,distence)
     #得到初始解以及初始距离
     route = random.sample(range(0, n_len), n_len) 
     total_dis = cacl_best(route,n_len,distence)
-    # print("初始路线：", route)
-    # print("初始距离：", total_dis)
+    print("初始路线：", route)
+    print("初始距离：", total_dis)
     #新解
     newroute = []
     new_total_dis = 0.0
@@ -174,18 +163,14 @@ def solve(file_name):
                     total_dis = new_total_dis
         t = t * a
     
-    # print("现在温度为：", t)
-    # print("最佳路线：", best)
+    print("现在温度为：", t)
+    print("最佳路线：", best)
     print("最佳距离：", best_total_dis)  
     # draw(best,city_x,city_y,n_len)   
     return best
 if __name__=="__main__":
-    # city_x,city_y = load_position('verify_order_postion_10.csv')
-    # print(city_x)
-    # print(city_y)
     start = time.time()
     best = solve('verify_order_postion_10.csv')
     end = time.time()
     print ('time : ',end-start)
     print (best)
-    print (start)
