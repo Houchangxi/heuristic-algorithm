@@ -14,12 +14,6 @@ import sys
 import copy
 import time
 
-'''
-记录错误，数组直接复制是复制地址
-例如， current = route
-想要得到一个新的有同样内容的数组，应该用： current = copy.copy(route) 
-'''
-
 #城市数量
 # n = 10
 # distance = [[0 for col in range(n)] for raw in range(n)]
