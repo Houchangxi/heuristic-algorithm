@@ -14,9 +14,6 @@ import sys
 import copy
 import time
 
-#城市数量
-# n = 10
-# distance = [[0 for col in range(n)] for raw in range(n)]
 #初始温度 结束温度
 T0 = 30
 Tend = 1e-8
