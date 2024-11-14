@@ -1,53 +1,34 @@
-# heuristic-algorithm
+ Heuristic Algorithm Path Planning Verification
+1. Selected Algorithms for Path Planning Verification:
+a. Traditional Algorithms
+• b. Heuristic Algorithms (Genetic Algorithm, Simulated Annealing)
+The traditional algorithms, such as Greedy and Dijkstra, choose the nearest distance at each step, which often leads to getting stuck in a local optimum, failing to obtain the global optimum. Thus, they cannot always find the best route in practical scenarios. Another disadvantage is that the time complexity can be very high, resulting in longer computation times for more complex calculations.
+Heuristic algorithms (HA) can accurately find the optimal solution, and their time complexity becomes increasingly advantageous with higher complexity cases. However, the disadvantage is that the "optimal solution" might not always be the "best solution." Based on the complexity of our data's path planning, we can obtain a satisfactory solution within a relatively short period. The data used consists of the latitude and longitude of actual orders from Kaggle, as shown below:
+•
+ 
+ 2. Comparison of Results from Implemented Heuristic Algorithms and Traditional Algorithms
+(Output: Optimal path as per data index order, minimum distance)
+a. Greedy
+◦ ◦
+b. Dijkstra
+• Optimal Path: [0, 8, 3, 4, 7, 1, 2, 5, 6]
+Minimum Distance: 183.79714557074675
+• Path visualization for the Dijkstra algorithm is shown below:
+ Optimal Path: [0, 8, 4, 3, 7, 1, 2, 5, 6]
+Minimum Distance: 188.11217727991738
+◦ Path visualization for the Greedy algorithm is shown below:
+  •
 
-旅行商问题（TSP）
+   c. Genetic Algorithm
+Optimal Path: [0, 3, 7, 1, 2, 6, 5, 4, 8]
+• Minimum Distance: 0.17250545785920712
+•
+  d. Simulated Annealing
+• Optimal Path: [0, 3, 7, 1, 2, 6, 5, 4, 8]
+• Minimum Distance: 0.17250545785920712
 
-模拟退火解决方案
+  From the comparison above, it can be concluded that the Heuristic Algorithm can achieve a globally optimal result. Therefore, for route planning, it is recommended to select from the Heuristic Algorithm methods.
 
-遗传算法解决方案
-
-Greedy and Dijkstra 算法无法找到最佳解
-
-
-
-Heuristic Algorithm路径规划算法验证报告
-
-
-1、路径规划验证选择的算法：
-	a、传统算法（Greedy, Dijkstra）
-	b、Heuristic Algorithm（Genetic Algorithm，Simulated Annealing）
-
-	传统算法的路径规划每一步都选取最近距离，很大程度都会陷入到局部最优解无法获取全局最优解，故无法在实际的路线规划中获得最佳路线，而且另外一个缺点是时间复杂度过高，越复杂的计算时间消耗越久。
-	HA算法能准确找到最优解，并且对于越复杂的情况时间复杂度越有优势，缺点是最优解并非最佳解，根据我们数据的路径规划的复杂程度，都可以较短时间内得到最佳解。
-	
-	数据选取为foodhwy实际订单的经纬度数据如下：
-
-
-
-
-
-
-
-2、现在已实现的Heuristic Algorithm有2种算法和传统的2种算法结果对比(输出结果：最优路径为数据的index顺序，最佳距离最短路径)：
-	a、Greedy
-		最优路径 [0, 8, 4, 3, 7, 1, 2, 5, 6]
-		最佳距离 188.11217727991738
-		如下图所示为：greedy算法路径
-
-
-
-
-	b、Dijkstra
-		最佳路线：  [0, 8, 3, 4, 7, 1, 2, 5, 6]
-		最佳距离：  183.79714557074675
-		如下图所示为：Dijkstra算法路径	
-
-
-
-
-	c、Genetic Algorithm
-		最佳路径：  [0, 3, 7, 1, 2, 6, 5, 4, 8]
-		最佳距离：  0.17250545785920712
 
 
 
