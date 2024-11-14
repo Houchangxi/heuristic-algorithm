@@ -28,12 +28,3 @@ Optimal Path: [0, 3, 7, 1, 2, 6, 5, 4, 8]
 • Minimum Distance: 0.17250545785920712
 
   From the comparison above, it can be concluded that the Heuristic Algorithm can achieve a globally optimal result. Therefore, for route planning, it is recommended to select from the Heuristic Algorithm methods.
-
-
-
-
-
-	d、Simulated Annealing
-		最佳路线： [0, 3, 7, 1, 2, 6, 5, 4, 8]
-		最佳距离： 0.17250545785920712
-如上对比数据，可得出结论，Heuristic Algorithm可以得到全局最优结果，故路径规划选择算法可以从Heuristic Algorithm算法中获得。
